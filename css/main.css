@@ -20,6 +20,15 @@ body {
     Arial,
     "Apple Color Emoji",
     "Segoe UI Emoji";
+  background-color: #11284b;
+}
+
+.bg-primary {
+  background-color: #11284b;
+}
+
+.bg-secondary {
+  background-color: #fff8e7;
 }
 
 /**
