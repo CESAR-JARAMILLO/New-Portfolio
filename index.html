@@ -271,7 +271,7 @@
             >
             <a
               href="#contact"
-              class="inline-flex items-center gap-2 rounded-md border border-zinc-300 bg-orange-400 px-3.5 py-2 text-sm font-medium tracking-tight text-white hover:bg-orange-300 transition"
+              class="inline-flex items-center gap-2 rounded-md border border-zinc-300 bg-orange-400 px-3.5 py-2 text-sm font-medium tracking-tight text-black hover:bg-orange-300 transition"
             >
               <i data-lucide="send" class="h-4 w-4"></i>
               <span>Let’s Connect</span>
@@ -565,7 +565,7 @@
             >
               <img
                 src="./img/cesar-about.webp"
-                alt="Portrait"
+                alt="Cesar Jaramillo portrait"
                 class="h-full w-full object-cover"
               />
             </div>
@@ -908,7 +908,7 @@
               >
                 <img
                   src="./img/bizmorph.png"
-                  alt="3D render"
+                  alt="BizMorph Digital Agency website preview"
                   class="w-full h-full object-cover transition duration-500 group-hover:scale-[1.02]"
                 />
               </a>
@@ -980,7 +980,7 @@
               >
                 <img
                   src="./img/coinbase.png"
-                  alt="Mountain product shot"
+                  alt="Coinbase landing page screenshot"
                   class="w-full h-full object-cover transition duration-500 group-hover:scale-[1.02]"
                 />
               </a>
@@ -1264,18 +1264,21 @@
               <div class="mt-4 flex items-center gap-3">
                 <a
                   href="https://github.com/CESAR-JARAMILLO"
+                  aria-label="GitHub profile"
                   class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 bg-white text-zinc-700 hover:text-zinc-900"
                 >
                   <i data-lucide="github" class="h-5 w-5"></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/cesar-jaramillo-dev/"
+                  aria-label="LinkedIn profile"
                   class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 bg-white text-zinc-700 hover:text-zinc-900"
                 >
                   <i data-lucide="linkedin" class="h-5 w-5"></i>
                 </a>
                 <a
                   href="mailto:cesarjdev@gmail.com"
+                  aria-label="Email Cesar"
                   class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 bg-white text-zinc-700 hover:text-zinc-900"
                 >
                   <i data-lucide="mail" class="h-5 w-5"></i>
@@ -1316,7 +1319,7 @@
               </p>
               <a
                 href="mailto:cesarjdev@gmail.com"
-                class="mt-4 inline-flex items-center gap-2 rounded-md bg-orange-400 px-4 py-2.5 text-white text-sm font-medium tracking-tight hover:bg-orange-300 transition"
+                class="mt-4 inline-flex items-center gap-2 rounded-md bg-orange-400 px-4 py-2.5 text-black text-sm font-medium tracking-tight hover:bg-orange-300 transition"
               >
                 <i data-lucide="send" class="h-4 w-4"></i>
                 <span>Email cesarjdev@gmail.com</span>
@@ -1347,6 +1350,7 @@
         <!-- Close Button -->
         <button
           id="closeModal"
+          aria-label="Close modal"
           class="absolute top-4 right-4 z-10 inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 bg-primary text-white hover:bg-zinc-300 transition"
         >
           <i data-lucide="x" class="h-5 w-5"></i>
@@ -1410,6 +1414,7 @@
       mobileBtn?.addEventListener("click", () => {
         const open = mobileMenu.classList.contains("hidden");
         mobileMenu.classList.toggle("hidden");
+        mobileBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
         mobileBtn.innerHTML = open
           ? '<i data-lucide="x" class="h-5 w-5"></i>'
           : '<i data-lucide="menu" class="h-5 w-5"></i>';
@@ -1421,6 +1426,7 @@
         a.addEventListener("click", () => {
           if (!mobileMenu.classList.contains("hidden")) {
             mobileMenu.classList.add("hidden");
+            mobileBtn.setAttribute("aria-label", "Open menu");
             mobileBtn.innerHTML = '<i data-lucide="menu" class="h-5 w-5"></i>';
             lucide.createIcons();
           }
