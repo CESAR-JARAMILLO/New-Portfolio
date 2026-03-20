@@ -1343,8 +1343,10 @@
 
       /**
        * Show the exit intent modal
+       * Disabled for now - remove the return below to re-enable
        */
       function showExitModal() {
+        return; // Modal disabled
         if (!modalShown) {
           exitModal.classList.remove("hidden");
           modalShown = true;
