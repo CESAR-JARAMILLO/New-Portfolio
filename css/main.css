@@ -1023,6 +1023,7 @@ body {
   color: var(--zinc-900);
 }
 
+.footer h3,
 .footer h4 {
   color: white;
   font-size: 1rem;
@@ -1133,7 +1134,7 @@ body {
   }
 }
 
-.exit-modal h2 {
+.exit-modal h3 {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.025em;
@@ -1143,13 +1144,13 @@ body {
 }
 
 @media (min-width: 640px) {
-  .exit-modal h2 {
+  .exit-modal h3 {
     font-size: 1.875rem;
   }
 }
 
 @media (min-width: 768px) {
-  .exit-modal h2 {
+  .exit-modal h3 {
     font-size: 2.25rem;
   }
 }
