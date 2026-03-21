@@ -1042,7 +1042,7 @@ body {
 
 .footer ul a {
   font-size: 0.875rem;
-  color: var(--zinc-200);
+  color: var(--zinc-100);
   transition: color 0.2s;
 }
 
@@ -1053,7 +1053,7 @@ body {
 .footer p {
   margin-top: 1rem;
   font-size: 0.875rem;
-  color: var(--zinc-200);
+  color: var(--zinc-100);
 }
 
 .footer .btn-cta {
@@ -1068,11 +1068,11 @@ body {
   align-items: center;
   justify-content: space-between;
   font-size: 0.75rem;
-  color: var(--zinc-500);
+  color: var(--zinc-200);
 }
 
 .footer-bottom span {
-  color: var(--zinc-200);
+  color: var(--zinc-100);
 }
 
 /* Exit Intent Modal */
