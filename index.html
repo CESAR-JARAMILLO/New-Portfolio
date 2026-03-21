@@ -146,12 +146,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://unpkg.com" />
 
+    <!-- Preload LCP image for faster hero load -->
+    <link rel="preload" as="image" href="./img/cesar-hero.webp" />
+
     <!-- Inter font - async load to avoid render blocking -->
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link
@@ -253,15 +259,10 @@
 
           <!-- Right: Email + CTA -->
           <div class="header-right">
-            <a
-              href="mailto:cesarjdev@gmail.com"
-              class="header-email"
+            <a href="mailto:cesarjdev@gmail.com" class="header-email"
               >CESARJDEV@GMAIL.COM</a
             >
-            <a
-              href="#contact"
-              class="btn-cta"
-            >
+            <a href="#contact" class="btn-cta">
               <i data-lucide="send" class="icon-sm"></i>
               <span>Let’s Connect</span>
             </a>
@@ -313,13 +314,12 @@
               src="./img/cesar-hero.webp"
               alt="Cesar Jaramillo"
               class="hero-image"
+              fetchpriority="high"
             />
 
             <!-- Bottom-left label -->
             <div class="hero-overlay">
-              <p>
-                Based in Los Angeles But Supporting Clients Worldwide
-              </p>
+              <p>Based in Los Angeles But Supporting Clients Worldwide</p>
             </div>
 
             <!-- Handle -->
@@ -339,9 +339,7 @@
       <section id="skills" class="skills-section">
         <div class="container">
           <div class="skills-header">
-            <h2 class="skills-title">
-              Core Skills
-            </h2>
+            <h2 class="skills-title">Core Skills</h2>
             <p class="skills-subtitle">
               Email development • Web administration • Marketing automation
             </p>
@@ -349,10 +347,7 @@
 
           <div class="skills-grid">
             <!-- HTML5 - Essential for email development -->
-            <a
-              class="skill-icon skill-icon-html5"
-              title="HTML5"
-            >
+            <a class="skill-icon skill-icon-html5" title="HTML5">
               <img
                 src="https://cdn.simpleicons.org/html5/0a0a0a"
                 alt="HTML5"
@@ -360,10 +355,7 @@
               />
             </a>
             <!-- CSS - Critical for email styling -->
-            <a
-              class="skill-icon skill-icon-css"
-              title="CSS"
-            >
+            <a class="skill-icon skill-icon-css" title="CSS">
               <img
                 src="https://cdn.simpleicons.org/css/0a0a0a"
                 alt="CSS"
@@ -371,10 +363,7 @@
               />
             </a>
             <!-- JavaScript - For interactive emails and web admin -->
-            <a
-              class="skill-icon skill-icon-js"
-              title="JavaScript"
-            >
+            <a class="skill-icon skill-icon-js" title="JavaScript">
               <img
                 src="https://cdn.simpleicons.org/javascript/0a0a0a"
                 alt="JavaScript"
@@ -382,10 +371,7 @@
               />
             </a>
             <!-- PHP - Backend programming language -->
-            <a
-              class="skill-icon skill-icon-php"
-              title="PHP"
-            >
+            <a class="skill-icon skill-icon-php" title="PHP">
               <img
                 src="https://cdn.simpleicons.org/php/0a0a0a"
                 alt="PHP"
@@ -393,10 +379,7 @@
               />
             </a>
             <!-- Mailchimp - Popular ESP and marketing platform -->
-            <a
-              class="skill-icon skill-icon-mailchimp"
-              title="Mailchimp"
-            >
+            <a class="skill-icon skill-icon-mailchimp" title="Mailchimp">
               <img
                 src="https://cdn.simpleicons.org/mailchimp/0a0a0a"
                 alt="Mailchimp"
@@ -404,10 +387,7 @@
               />
             </a>
             <!-- HubSpot - Marketing automation and CRM -->
-            <a
-              class="skill-icon skill-icon-hubspot"
-              title="HubSpot"
-            >
+            <a class="skill-icon skill-icon-hubspot" title="HubSpot">
               <img
                 src="https://cdn.simpleicons.org/hubspot/0a0a0a"
                 alt="HubSpot"
@@ -415,10 +395,7 @@
               />
             </a>
             <!-- Shopify - E-commerce platform -->
-            <a
-              class="skill-icon skill-icon-shopify"
-              title="Shopify"
-            >
+            <a class="skill-icon skill-icon-shopify" title="Shopify">
               <img
                 src="https://cdn.simpleicons.org/shopify/0a0a0a"
                 alt="Shopify"
@@ -426,10 +403,7 @@
               />
             </a>
             <!-- WordPress - CMS administration -->
-            <a
-              class="skill-icon skill-icon-wordpress"
-              title="WordPress"
-            >
+            <a class="skill-icon skill-icon-wordpress" title="WordPress">
               <img
                 src="https://cdn.simpleicons.org/wordpress/0a0a0a"
                 alt="WordPress"
@@ -437,10 +411,7 @@
               />
             </a>
             <!-- Google Analytics - Web analytics -->
-            <a
-              class="skill-icon skill-icon-analytics"
-              title="Google Analytics"
-            >
+            <a class="skill-icon skill-icon-analytics" title="Google Analytics">
               <img
                 src="https://cdn.simpleicons.org/googleanalytics/0a0a0a"
                 alt="Google Analytics"
@@ -448,10 +419,7 @@
               />
             </a>
             <!-- Mailgun - Transactional email service -->
-            <a
-              class="skill-icon skill-icon-mailgun"
-              title="Mailgun"
-            >
+            <a class="skill-icon skill-icon-mailgun" title="Mailgun">
               <img
                 src="https://cdn.simpleicons.org/mailgun/0a0a0a"
                 alt="Mailgun"
@@ -466,9 +434,7 @@
       <section id="about" class="about-section">
         <div class="container about-grid">
           <div class="about-content">
-            <h2 class="about-title">
-              About
-            </h2>
+            <h2 class="about-title">About</h2>
             <p class="about-text">
               I’m a Web Administrator and Automation Specialist focused on
               building and managing clean, high-performance websites while
@@ -524,9 +490,7 @@
       <section id="projects" class="projects-section">
         <div class="container">
           <div class="projects-header">
-            <h2 class="section-title">
-              Selected Projects
-            </h2>
+            <h2 class="section-title">Selected Projects</h2>
             <!-- <a
               href="#"
               class="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-zinc-700 hover:text-zinc-900"
@@ -551,10 +515,7 @@
                   })
                 "
               >
-                <img
-                  src="./img/gymshark.webp"
-                  alt="Gymshark Clone"
-                />
+                <img src="./img/gymshark.webp" alt="Gymshark Clone" />
               </a>
               <div class="project-card-content">
                 <div class="project-tags">
@@ -590,10 +551,7 @@
                     rel="noopener noreferrer"
                     class="project-link"
                   >
-                    <i
-                      data-lucide="external-link"
-                      class="icon-sm"
-                    ></i>
+                    <i data-lucide="external-link" class="icon-sm"></i>
                     <span>Visit Site</span>
                   </a>
                   <div class="project-icons">
@@ -605,9 +563,7 @@
             </article>
 
             <!-- Card 2 -->
-            <article
-              class="project-card"
-            >
+            <article class="project-card">
               <a
                 href="./projects/gymshark-showcase-email/index.html"
                 target="_blank"
@@ -627,14 +583,8 @@
               </a>
               <div class="project-card-content">
                 <div class="project-tags">
-                  <span
-                    class="tag tag-dark"
-                    >HTML</span
-                  >
-                  <span
-                    class="tag tag-dark"
-                    >CSS</span
-                  >
+                  <span class="tag tag-dark">HTML</span>
+                  <span class="tag tag-dark">CSS</span>
                 </div>
                 <a
                   href="./projects/gymshark-showcase-email/index.html"
@@ -660,10 +610,7 @@
                     rel="noopener noreferrer"
                     class="project-link"
                   >
-                    <i
-                      data-lucide="external-link"
-                      class="icon-sm"
-                    ></i>
+                    <i data-lucide="external-link" class="icon-sm"></i>
                     <span>View Project</span>
                   </a>
                   <div class="project-icons">
@@ -675,9 +622,7 @@
             </article>
 
             <!-- Card 3 -->
-            <article
-              class="project-card"
-            >
+            <article class="project-card">
               <a
                 href="./projects/waves-email/index.html"
                 target="_blank"
@@ -690,21 +635,12 @@
                   })
                 "
               >
-                <img
-                  src="./img/waves.webp"
-                  alt="Waves Newsletter Email"
-                />
+                <img src="./img/waves.webp" alt="Waves Newsletter Email" />
               </a>
               <div class="project-card-content">
                 <div class="project-tags">
-                  <span
-                    class="tag tag-dark"
-                    >HTML</span
-                  >
-                  <span
-                    class="tag tag-dark"
-                    >CSS</span
-                  >
+                  <span class="tag tag-dark">HTML</span>
+                  <span class="tag tag-dark">CSS</span>
                 </div>
                 <a
                   href="./projects/waves-email/index.html"
@@ -730,10 +666,7 @@
                     rel="noopener noreferrer"
                     class="project-link"
                   >
-                    <i
-                      data-lucide="external-link"
-                      class="icon-sm"
-                    ></i>
+                    <i data-lucide="external-link" class="icon-sm"></i>
                     <span>View Project</span>
                   </a>
                   <div class="project-icons">
@@ -745,9 +678,7 @@
             </article>
 
             <!-- Card 4 -->
-            <article
-              class="project-card"
-            >
+            <article class="project-card">
               <a
                 href="./projects/clothing-shop-email/index.html"
                 target="_blank"
@@ -760,21 +691,12 @@
                   })
                 "
               >
-                <img
-                  src="./img/saks-fifth.webp"
-                  alt="Saks Promotional Email"
-                />
+                <img src="./img/saks-fifth.webp" alt="Saks Promotional Email" />
               </a>
               <div class="project-card-content">
                 <div class="project-tags">
-                  <span
-                    class="tag tag-dark"
-                    >HTML</span
-                  >
-                  <span
-                    class="tag tag-dark"
-                    >CSS</span
-                  >
+                  <span class="tag tag-dark">HTML</span>
+                  <span class="tag tag-dark">CSS</span>
                 </div>
                 <a
                   href="./projects/clothing-shop-email/index.html"
@@ -801,10 +723,7 @@
                     rel="noopener noreferrer"
                     class="project-link"
                   >
-                    <i
-                      data-lucide="external-link"
-                      class="icon-sm"
-                    ></i>
+                    <i data-lucide="external-link" class="icon-sm"></i>
                     <span>View Project</span>
                   </a>
                   <div class="project-icons">
@@ -816,9 +735,7 @@
             </article>
 
             <!-- Card 5 -->
-            <article
-              class="project-card"
-            >
+            <article class="project-card">
               <a
                 href="https://bizmorph.com/"
                 target="_blank"
@@ -832,20 +749,14 @@
                 "
               >
                 <img
-                  src="./img/bizmorph.png"
+                  src="./img/bizmorph.webp"
                   alt="BizMorph Digital Agency website preview"
                 />
               </a>
               <div class="project-card-content">
                 <div class="project-tags">
-                  <span
-                    class="tag tag-light"
-                    >WordPress</span
-                  >
-                  <span
-                    class="tag tag-light"
-                    >PHP</span
-                  >
+                  <span class="tag tag-light">WordPress</span>
+                  <span class="tag tag-light">PHP</span>
                 </div>
                 <a
                   href="https://bizmorph.com/"
@@ -872,10 +783,7 @@
                     rel="noopener noreferrer"
                     class="project-link"
                   >
-                    <i
-                      data-lucide="external-link"
-                      class="icon-sm"
-                    ></i>
+                    <i data-lucide="external-link" class="icon-sm"></i>
                     <span>Visit Site</span>
                   </a>
                   <div class="project-icons">
@@ -963,9 +871,7 @@
       <section id="case-studies" class="case-studies-section">
         <div class="container">
           <div class="skills-header">
-            <h2 class="section-title">
-              Case Studies
-            </h2>
+            <h2 class="section-title">Case Studies</h2>
             <!-- <a
               href="#"
               class="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-zinc-700 hover:text-zinc-900"
@@ -1124,7 +1030,7 @@
                   "
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop"
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=640&auto=format&fit=crop"
                     alt="Aegis Facility & Security email funnel case study"
                   />
                 </a>
@@ -1139,9 +1045,7 @@
         <div class="container footer-inner">
           <div class="footer-grid">
             <div>
-              <div class="footer-logo">
-                CJ
-              </div>
+              <div class="footer-logo">CJ</div>
               <p class="footer-about">
                 Portfolio of Cesar Jaramillo. Focused on CMS management,
                 marketing automation, and high-performance web experiences.
@@ -1159,10 +1063,7 @@
                 >
                   <i data-lucide="linkedin" class="icon-md"></i>
                 </a>
-                <a
-                  href="mailto:cesarjdev@gmail.com"
-                  aria-label="Email Cesar"
-                >
+                <a href="mailto:cesarjdev@gmail.com" aria-label="Email Cesar">
                   <i data-lucide="mail" class="icon-md"></i>
                 </a>
               </div>
@@ -1181,9 +1082,7 @@
                   <a href="#skills">Skills</a>
                 </li>
                 <li>
-                  <a href="#case-studies"
-                    >Case Studies</a
-                  >
+                  <a href="#case-studies">Case Studies</a>
                 </li>
                 <!-- <li><a href="#" class="hover:text-orange-300">Resume</a></li> -->
               </ul>
@@ -1195,10 +1094,7 @@
                 Open to web administration, marketing automation, and freelance
                 opportunities.
               </p>
-              <a
-                href="mailto:cesarjdev@gmail.com"
-                class="btn-cta"
-              >
+              <a href="mailto:cesarjdev@gmail.com" class="btn-cta">
                 <i data-lucide="send" class="icon-sm"></i>
                 <span>Email cesarjdev@gmail.com</span>
               </a>
@@ -1206,9 +1102,7 @@
           </div>
 
           <div class="footer-bottom">
-            <span>
-              © <span id="year"></span> Cesar Jaramillo
-            </span>
+            <span> © <span id="year"></span> Cesar Jaramillo </span>
             <span>Crafted with intention.</span>
           </div>
         </div>
@@ -1219,16 +1113,18 @@
     <div id="exitModal" class="exit-modal hidden">
       <div class="exit-modal-content">
         <!-- Close Button -->
-        <button id="closeModal" aria-label="Close modal" class="exit-modal-close">
+        <button
+          id="closeModal"
+          aria-label="Close modal"
+          class="exit-modal-close"
+        >
           <i data-lucide="x" class="icon-md"></i>
         </button>
 
         <!-- Modal Content -->
         <div class="exit-modal-body">
           <!-- Title -->
-          <h2>
-            Before You Leave Let Me Properly Introduce Myself
-          </h2>
+          <h2>Before You Leave Let Me Properly Introduce Myself</h2>
 
           <!-- Video Embed -->
           <div class="exit-modal-video">
