@@ -1,3 +1,5 @@
+<!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -1129,7 +1131,7 @@
           <!-- Video Embed -->
           <div class="exit-modal-video">
             <iframe
-              src="https://www.youtube.com/embed/hhgSXAWq8to"
+              data-src="https://www.youtube.com/embed/hhgSXAWq8to"
               title="Introduction Video"
               frameborder="0"
               allow="
@@ -1253,6 +1255,11 @@
         if (!modalShown) {
           exitModal.classList.remove("hidden");
           modalShown = true;
+          // Lazy-load YouTube iframe (only when modal opens, avoids third-party cookies until needed)
+          const iframe = exitModal.querySelector("iframe[data-src]");
+          if (iframe && iframe.dataset.src && !iframe.src) {
+            iframe.src = iframe.dataset.src;
+          }
           // Prevent body scroll when modal is open
           document.body.style.overflow = "hidden";
           // Reinitialize icons for modal buttons
