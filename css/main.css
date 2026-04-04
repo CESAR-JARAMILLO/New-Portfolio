@@ -1023,6 +1023,13 @@ body {
   color: var(--zinc-900);
 }
 
+/* Inline SVG social icons (no Lucide dependency; avoids ad-block hiding) */
+.footer-social svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
 .footer h3,
 .footer h4 {
   color: white;
